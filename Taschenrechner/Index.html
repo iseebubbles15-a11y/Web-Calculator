@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Taschenrechner</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="keywords" content="Taschenrechner">
+    <link rel="stylesheet" href="Css.css">
+    <script src="JS.js" defer></script> 
+</head>
+<body>
+
+    <button class="theme-switch" onclick="toggleMood()">Mood wechseln</button>
+
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        
+        <div class="buttons">
+            <button onclick="Operator('C')" id="clear-btn">C</button>
+                
+            <button onclick="number('7')">7</button>
+            <button onclick="number('8')">8</button>
+            <button onclick="number('9')">9</button>
+            <button onclick="Operator('/')">/</button>
+                
+            <button onclick="number('4')">4</button>
+            <button onclick="number('5')">5</button>
+            <button onclick="number('6')">6</button>
+            <button onclick="Operator('x')">x</button>
+                
+            <button onclick="number('1')">1</button>
+            <button onclick="number('2')">2</button>
+            <button onclick="number('3')">3</button>
+            <button onclick="Operator('+')">+</button>
+             
+            <button onclick="number('0')">0</button>
+            <button onclick="Operator(',')">,</button>
+            <button onclick="Operator('-')">-</button>
+            <button onclick="Operator('=')">=</button>
+        </div>
+    </div>
+
+</body>
+</html>

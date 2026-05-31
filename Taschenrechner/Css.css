@@ -1,0 +1,127 @@
+/*farbvariabeln für moods*/
+
+/* Pastell-Design */
+body {
+    --bg-page: rgb(243, 247, 246);
+    --bg-calc: rgb(204, 230, 224);
+    --bg-display: rgb(255, 255, 255);
+    --bg-button: rgb(255, 255, 255);
+    --bg-clear: rgb(172, 194, 216);
+    --bg-equal: rgb(129, 161, 193);
+    --text-main: rgb(74, 85, 104);
+    --text-equal: rgb(255, 255, 255);
+    --border-radius-calc: 16px;
+    --border-radius-btn: 12px;
+    --border-display: none;
+    --font-style: Arial, Helvetica, sans-serif;
+    --box-shadow-glow: 0px 8px 24px rgba(120, 140, 135, 0.15);
+}
+
+/* retro design  */
+body.mood-retro {
+    --bg-page: rgb(11, 12, 16);
+    --bg-calc: rgb(31, 40, 51);
+    --bg-display: rgb(11, 12, 16);
+    --bg-button: rgb(11, 12, 16);
+    --bg-clear: rgb(255, 0, 127);
+    --bg-equal: rgb(11, 12, 16);
+    --text-main: rgb(102, 252, 241);
+    --text-equal: rgb(102, 252, 241);
+    --border-radius-calc: 0px;
+    --border-radius-btn: 0px;
+    --border-display: solid 2px rgb(102, 252, 241);
+    --font-style: 'Courier New', Courier, monospace;
+    --box-shadow-glow: 0px 0px 25px rgb(102, 252, 241);
+}
+
+
+/*für layout*/
+
+body {
+    background-color: var(--bg-page);
+    font-family: var(--font-style);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    transition: background-color 0.3s ease;
+}
+
+/* mood wechseln */
+.theme-switch {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid var(--text-main);
+    background-color: var(--bg-button);
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+
+.calculator {
+    width: 400px;            
+    border-radius: var(--border-radius-calc);     
+    padding: 25px;           
+    background-color: var(--bg-calc); 
+    box-shadow: var(--box-shadow-glow);
+    transition: all 0.3s ease;
+}
+
+
+
+.display {
+    background-color: var(--bg-display); 
+    color: var(--text-main);             
+    text-align: right;
+    padding: 15px;
+    height: 60px;            
+    font-size: 2rem;         
+    border: var(--border-display);
+    border-radius: var(--border-radius-btn);
+    box-sizing: border-box;  
+}
+
+.buttons button {
+    padding: 20px;           
+    font-size: 1.4rem;       
+    border-radius: var(--border-radius-btn);     
+    border: var(--border-display);            
+    background-color: var(--bg-button); 
+    color: var(--text-main);             
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+    filter: brightness(0.9); /* Macht den Button beim Hover leicht dunkler */
+}
+
+#clear-btn {
+    grid-column: span 4;
+    background-color: var(--bg-clear); 
+    color: var(--text-main);
+}
+
+/* wenn retro mood ->schrift auf C weiss */
+body.mood-retro #clear-btn {
+    color: white;
+}
+
+.buttons button:last-child {
+    background-color: var(--bg-equal); 
+    color: var(--text-equal);            
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;               
+    margin-top: 20px;
+}
