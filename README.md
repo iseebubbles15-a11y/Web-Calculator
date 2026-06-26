@@ -6,7 +6,7 @@ This project is built completely with native HTML, CSS (utilizing CSS custom pro
 ### Features
 - Fully Functional Calculator: Supports basic arithmetic operations (addition, subtraction, multiplication, division) along with decimal inputs.
 - Theme / Mood Switch: Switch seamlessly between two entirely different visual styles with a single click:
-- - Pastell (Default): A light, soft, clean design with rounded corners and subtle shadows.
+  - Pastell (Default): A light, soft, clean design with rounded corners and subtle shadows.
   - Retro: A dark, vibrant neon cyberpunk/terminal look featuring monospace typography and sharp, solid borders.
 - Error Handling: Automatically catches invalid mathematical expressions and displays an "error" message.
 
